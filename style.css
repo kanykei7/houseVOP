@@ -1,0 +1,441 @@
+body{
+    color: white;
+    margin: 0;
+    background-color: #242B33;
+}
+.header{
+    background: url(./images/rect.png.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.container_footer{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: space-between;
+    flex-wrap: wrap;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.logo{
+    background: url(./images/logo.svg.svg);
+    width: 134px;
+    height: 66px;
+}
+.navbar__menu{
+    display: flex;
+    list-style: none;
+}
+.navbar__item{
+    margin-right: 15px;
+}
+.header__welcome{
+    margin-top: 260px;
+}
+.header__welcome-title{
+    font-size: 48px;
+    text-align: center;
+    color: #D4C17F;
+}
+.header__mouse{
+    background: url(./images/mouse.svg.svg);
+    width: 40px;
+    height: 40px;
+    margin: 150px auto;
+}
+.header__contact{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.first-section{
+    margin-top: 120px;
+}
+.first-section__places{
+    display: flex;
+    justify-content: center;
+}
+.first-section__places__item{
+    text-align: center;
+    margin: 50px 40px 0px 40px;
+   
+}
+
+.rooms{
+    display: flex;
+    margin-top: 50px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: #D4C17F;
+    margin-top: 120px;
+}
+.loft-1> img{
+    background-repeat: no-repeat;
+    display: block;
+    max-width: 100%;
+    
+}
+.loft-2> img{
+    background-repeat: no-repeat;
+    display: block;
+    max-width: 100%;
+
+}
+
+.loft-1> p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Raleway', sans-serif; 
+}
+.loft-2> p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Raleway', sans-serif;
+}
+.footer{
+    background: url(./images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+
+}
+.lorem{
+    width: 400px;
+}
+.lorem>span{
+    font-style: normal;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 19px;
+}
+.click{
+  
+    width: 476px;
+    margin-top: 170px;
+    flex-wrap: wrap;
+    margin-left: 37px;
+}
+button{
+    border: 0;
+}
+.click__1{
+    text-decoration: none;
+    background-color: rgba(255, 255,255, 0.2);
+    width: 200px;
+    font-family: 'Raleway', sans-serif;
+    height: 30px;
+}
+.click__2{
+    text-decoration: none;
+    background-color: rgba(255, 255,255, 0.2);
+    width: 200px;
+    height: 30px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 40px;
+}
+.click__1::placeholder{
+    color: white;
+    text-align: center;
+    border: 0;
+}
+.click__2::placeholder{
+    color: white;
+    text-align: center;
+    border: 0;
+}
+.click__3{
+    text-decoration: none;
+    color: white;
+    background: #D4C17F;
+    width: 207px;
+    height: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-left: 250px;
+    margin-top: -100px;
+}
+.footer__text{
+width: 206px;
+height: 37px;
+font-size: 10.5px;
+font-family: 'Raleway', sans-serif;
+text-align: center;
+margin-top: 25px;
+margin-right: 0;
+}
+
+
+/* Hamburger menu start */
+
+#menu__toggle{
+    opacity: 0;
+}
+.menu__btn{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    z-index: 2;
+}
+.menu__btn > span, 
+.menu__btn > span::before, 
+.menu__btn > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s transform linear;
+}
+
+.menu__btn > span::before{
+    content: '';
+    top: -8px;
+    background-color: black;
+}
+.menu__btn > span::after{
+    content: '';
+    top: 8px;
+    background-color: black;
+}
+
+#menu__toggle:checked ~ .menu__btn > span{
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before{
+    top: 0;
+    display: none;
+    opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box{
+    visibility: visible;
+    right: 0;
+}
+  
+  /* Hamburger menu end */
+  
+@media all and (max-width: 768px){
+    .menu__btn{
+        visibility: visible;
+    }
+    .menu__box{
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        text-align: center;
+        background-color: slategray;
+        z-index: 1;
+        transition: 0.3s ease-out;
+    }
+    .navbar__item{
+        display: block;
+        padding: 12px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+    .navbar__item:hover{
+        background-color: black;
+    }
+    .first-section__places{
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
+        margin: 0 auto;
+    }
+    .click{
+        display: flex;
+        align-items: flex-end;
+    }
+    .navbar{
+        margin: 0 40px;
+    }
+    .header{
+        background-size: cover;
+        background-position: center;
+    }
+    .loft-1{
+        margin: 0 auto;
+    }
+    .loft-2{
+        margin: 0 auto;
+    }
+    .header__welcome-title{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .click__1{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+        margin-bottom: 100px;
+    }
+    .click__2{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+        margin-bottom: 100px;
+    }
+    .click__3{
+        width: 130px;
+        height: 30px;
+        margin-left: 170px;
+        margin-top: -30px;
+        font-size: 8px;
+        margin-bottom: 00px;
+    }
+    .footer__text{
+        width: 130px;
+        font-size: 8px;
+        margin-bottom: 50px;
+        margin-left: -130px;
+    }
+    
+}
+@media all and (max-width: 1300px){
+    .rooms{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+
+    }
+    .navbar{
+        margin: 0 40px;
+    }
+    .header{
+        background-size: cover;
+        background-position: center;
+    }
+    .loft-1{
+        margin: 0 auto;
+    }
+    .loft-2{
+        margin: 0 auto;
+    }
+   
+
+}
+
+@media all and (max-width: 400px){
+    .first-section__places{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .lorem>p{
+        max-width: 100%;
+        font-size: 8px;
+    }
+    .click>button{
+        max-width: 100%;
+        padding: 10px;
+    }
+    .header__welcome-title{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .address__place{
+        font-size: 10px;
+    }
+    .header__phone{
+        font-size: 10px;
+    }
+    .loft-1>img{
+        margin-right: 0px;
+    }
+    .loft-2>img{
+        margin-left: 0px;
+    }
+    .click__1{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    .click__2{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    .click__3{
+        width: 130px;
+        height: 30px;
+        margin-left: 170px;
+        margin-top: -30px;
+        font-size: 8px;
+    }
+    .footer__text{
+        width: 130px;
+        font-size: 8px;
+    }
+}
+@media all and (max-width: 320px){
+    .click{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .click__1{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+        margin: 40px 0px 0px 0px;
+    }
+    .click__2{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+        margin: 0px;
+    }
+    .click__3{
+        width: 130px;
+        height: 30px;
+        font-size: 8px;
+        margin: 0px;
+    }
+    .footer__text{
+        width: 130px;
+        font-size: 8px;
+        margin: 0px;
+    }
+    .first-section__places__item{
+        font-size: 10px;
+    }
+}
